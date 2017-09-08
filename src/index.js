@@ -18,7 +18,7 @@ let rnd = Math.random()
 server.on('connection', (socket) => {
   socket.logEmitter = setInterval(() => {
     rnd = Math.random()
-    socket.emit('msg', {
+    socket.emit('message', {
       id: uuidv4(),
       message: messages[Math.floor(rnd * 4)]
     })
