@@ -23,7 +23,7 @@ server.on('connection', (socket) => {
       message: messages[Math.floor(rnd * 4)]
     })
   }, rnd * 3 * 1000)
-  socket.emit('remove', msg => {
+  socket.on('remove', msg => {
     console.log(msg.id, 'removed')
   })
 })
